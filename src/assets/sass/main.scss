@@ -17,10 +17,10 @@ $textLight: hsla(0, 0%, 0%, 0.33);
 
 // Override global Sass variables from the /utilities folder
 @use "bulma/sass/utilities" with (
-  $background: $background,
   $weight-normal: 500,
   $family-primary: "firacode, monospace",
   $primary: $orange,
+  $info: $pink,
 );
 
 // Override Sass variables from the /form folder
@@ -30,18 +30,12 @@ $textLight: hsla(0, 0%, 0%, 0.33);
 
 // Import the components you need
 @forward "bulma/sass/base";
-@forward "bulma/sass/components/card";
-@forward "bulma/sass/components/modal";
-@forward "bulma/sass/components/navbar";
-@forward "bulma/sass/elements/button";
-@forward "bulma/sass/elements/icon";
-@forward "bulma/sass/elements/content";
-@forward "bulma/sass/elements/notification";
-@forward "bulma/sass/elements/progress";
-@forward "bulma/sass/elements/tag";
-@forward "bulma/sass/layout/footer";
-
-// Import the themes so that all CSS variables have a value
+@forward "bulma/sass/components";
+@forward "bulma/sass/elements";
+@forward "bulma/sass/form";
+@forward "bulma/sass/grid";
+@forward "bulma/sass/helpers";
+@forward "bulma/sass/layout";
 @forward "bulma/sass/themes";
 
 @font-face {
@@ -51,5 +45,4 @@ $textLight: hsla(0, 0%, 0%, 0.33);
 
 html {
   background-color: rgb(29, 42, 53);
-  color: rgb(203, 213, 225);
 }
