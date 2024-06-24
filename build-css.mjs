@@ -4,7 +4,7 @@ import { sassPlugin } from 'esbuild-sass-plugin';
 
 const config = {
     entryPoints: ['src/assets/sass/main.scss'],
-    outdir: 'src/assets/css',
+    outdir: 'docs/assets/css',
     bundle: true,
     minify: true,
     plugins: [sassPlugin()],

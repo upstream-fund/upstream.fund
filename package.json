@@ -2,10 +2,9 @@
   "name": "upstream.fund",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rm src/index.html; touch src/index.html",
     "build-css": "node build-css.mjs",
-    "build-pug": "pug -O src/index.html src/index.pug",
-    "build": "npm-run-all clean build-css build-pug",
+    "build-pug": "pug -o docs/ src",
+    "build": "npm-run-all build-css build-pug",
     "watch": "pug -w -O src/index.html src/index.pug"
   },
   "author": "Fabian Schuh",
