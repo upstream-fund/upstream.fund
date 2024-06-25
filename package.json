@@ -5,7 +5,7 @@
     "build-css": "node build-css.mjs",
     "build-pug": "pug -o docs/ src",
     "build": "npm-run-all build-css build-pug",
-    "watch": "pug -w -O src/index.html src/index.pug"
+    "watch": "pug -w -o docs src/index.pug"
   },
   "author": "Fabian Schuh",
   "license": "UNLICENSED",

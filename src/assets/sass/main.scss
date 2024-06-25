@@ -1,31 +1,17 @@
 @charset "utf-8";
 
-     
-
 // Set your brand colors
-$purple: #8a4d76;
 $pink: #fa7c91;
-$brown: #757763;
 $beige-light: #d0d1cd;
-$beige-lighter: #eff0eb;
 $orange: rgb(5, 206, 145);
-
-$brandColor: hsl(166, 67%, 51%);
-$background: rgb(29, 42, 53);
-$textDark: rgb(203, 213, 225);
-$textLight: hsla(0, 0%, 0%, 0.33);
 
 // Override global Sass variables from the /utilities folder
 @use "bulma/sass/utilities" with (
+  $text: $beige-light,
   $weight-normal: 500,
   $family-primary: "firacode, monospace",
   $primary: $orange,
-  $info: $pink,
-);
-
-// Override Sass variables from the /form folder
-@use "bulma/sass/form" with (
-  $input-shadow: none
+  $info: $pink
 );
 
 // Import the components you need
@@ -39,10 +25,18 @@ $textLight: hsla(0, 0%, 0%, 0.33);
 @forward "bulma/sass/themes";
 
 @font-face {
-    font-family: firacode;
-    src: url('../fonts/FiraCode-VariableFont_wght.ttf');
+  font-family: firacode;
+  src: url("../fonts/FiraCode-VariableFont_wght.ttf");
 }
 
 html {
-  background-color: rgb(29, 42, 53);
+  line-height: 1.15;
 }
+
+// fontawesome
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts/";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/v4-shims";
